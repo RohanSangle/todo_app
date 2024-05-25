@@ -1,0 +1,40 @@
+.noteList{
+    position: relative;
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    height: 55%;
+    width: 35%;
+    margin-top: 2.5%;
+    margin-left: 30%;
+}
+
+.lastline{
+    position: relative;
+    width: 35%;
+    height: 1%;
+    margin-left: 30%;
+    /* margin-top: 3%; */
+}
+
+.footer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+    height: 5%;
+    margin-left: 30%;
+    margin-top: -3%;
+    justify-content: center;
+    align-items: center;
+
+    >p{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    >button{
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+}
