@@ -1,4 +1,4 @@
-.noteList{
+.noteList-container{
     position: relative;
     background-color: hsl(0, 0%, 98%);
     border-radius: 7px;
@@ -7,6 +7,35 @@
     width: 35%;
     margin-top: 2.5%;
     margin-left: 30%;
+    overflow: hidden;
+}
+
+.noteList-content{
+    /* position: relative; */
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+    padding-right: 20px;
+    box-sizing: content-box;
+    /* z-index: 100; */
+}
+
+.noteList-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.noteList-content::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 10px;
+}
+
+.noteList-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.noteList-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .lastline{
@@ -24,7 +53,7 @@
     width: 35%;
     height: 5%;
     margin-left: 30%;
-    margin-top: -3%;
+    margin-top: -2.5%;
     justify-content: center;
     align-items: center;
 

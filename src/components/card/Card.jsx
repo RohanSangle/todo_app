@@ -1,11 +1,33 @@
 import React from 'react'
 import './card.css'
 
-const Card = () => {
+import Note from '../notes/Note.jsx'
+
+const Card = ({notes, setNotes}) => {
+
+
+  const deleteNote = (id) => {
+    setNotes(prevNotes=>{
+      return prevNotes.filter((noteItem, index) => {
+        return index !== id;
+      })
+    })
+  }
+
   return (
     <>
-        <div className='noteList'>
-            
+        <div className='noteList-container'>
+          <div className='noteList-content'>
+            {notes.map((noteItem, index)=>{
+              return (
+              <Note
+                key={index}
+                id={index}
+                content={noteItem} 
+                onDelete={deleteNote}
+              />)
+            })} 
+          </div>
         </div>
         {/* <hr className='lastline'></hr> */}
         <div className='footer'>

@@ -3,7 +3,7 @@ import './App.css'
 
 import Card from './components/card/Card.jsx'
 import CreateNote from './components/createNote/CreateNote.jsx'
-import Note from './components/notes/Note.jsx'
+// import Note from './components/notes/Note.jsx'
 
 import bgLight from './images/bg-desktop-light.jpg';
 import bgDark from './images/bg-desktop-dark.jpg';
@@ -27,13 +27,13 @@ function App() {
     })
   }
 
-  const deleteNote = (id) => {
-    setNotes(prevNotes=>{
-      return prevNotes.filter((noteItem, index) => {
-        return index !== id;
-      })
-    })
-  }
+  // const deleteNote = (id) => {
+  //   setNotes(prevNotes=>{
+  //     return prevNotes.filter((noteItem, index) => {
+  //       return index !== id;
+  //     })
+  //   })
+  // }
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
@@ -44,8 +44,9 @@ function App() {
         {/* <img className='themeSwitch' onClick={toggleTheme} src={theme === 'light' ? sun : moon} alt=''/> */}
 
         <CreateNote onAdd={addNote}/>
-        <Card/>
-        {notes.map((noteItem, index)=>{
+        {/* <Card/> */}
+        <Card notes={notes} setNotes={setNotes}/>
+        {/* {notes.map((noteItem, index)=>{
           return (
           <Note
             key={index}
@@ -53,7 +54,7 @@ function App() {
             content={noteItem} 
             onDelete={deleteNote}
           />)
-        })}
+        })} */}
 
         <p className='end'>Drag and drop to reorder list</p>
         
