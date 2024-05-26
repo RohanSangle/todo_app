@@ -3,7 +3,7 @@ import './card.css'
 
 import Note from '../notes/Note.jsx'
 
-const Card = ({notes, setNotes}) => {
+const Card = ({notes, setNotes, theme}) => {
 
 
   const deleteNote = (id) => {
@@ -25,6 +25,7 @@ const Card = ({notes, setNotes}) => {
                 id={index}
                 content={noteItem} 
                 onDelete={deleteNote}
+                theme={theme}
               />)
             })} 
           </div>

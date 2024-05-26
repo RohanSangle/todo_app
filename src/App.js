@@ -45,7 +45,7 @@ function App() {
 
         <CreateNote onAdd={addNote}/>
         {/* <Card/> */}
-        <Card notes={notes} setNotes={setNotes}/>
+        <Card notes={notes} setNotes={setNotes} theme={theme}/>
         {/* {notes.map((noteItem, index)=>{
           return (
           <Note
