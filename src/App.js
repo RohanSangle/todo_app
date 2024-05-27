@@ -7,8 +7,8 @@ import CreateNote from './components/createNote/CreateNote.jsx'
 
 import bgLight from './images/bg-desktop-light.jpg';
 import bgDark from './images/bg-desktop-dark.jpg';
-// import sun from './images/icon-sun.svg';
-// import moon from './images/icon-moon.svg';
+import sun from './images/icon-sun.svg';
+import moon from './images/icon-moon.svg';
 
 export const ThemeContext = createContext(null);
 
@@ -39,11 +39,11 @@ function App() {
     <ThemeContext.Provider value={{theme, toggleTheme}}>
       <div className='main' id={theme}>
         <img className='bgHeader' src={theme === 'light' ? bgLight : bgDark} alt=''/>
-        <h2 className='title'>TODO</h2>
-        <article className='trial' onClick={toggleTheme}></article>
-        {/* <img className='themeSwitch' onClick={toggleTheme} src={theme === 'light' ? sun : moon} alt=''/> */}
+        <h1 className='title'>TODO</h1>
+        {/* <article className='trial' onClick={toggleTheme}></article> */}
+        <img className='themeSwitch' onClick={toggleTheme} src={theme === 'light' ? moon : sun} alt=''/>
 
-        <CreateNote onAdd={addNote}/>
+        <CreateNote onAdd={addNote} theme={theme}/>
         {/* <Card/> */}
         <Card notes={notes} setNotes={setNotes} theme={theme}/>
         {/* {notes.map((noteItem, index)=>{

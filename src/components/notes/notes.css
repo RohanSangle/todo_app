@@ -1,14 +1,23 @@
 .standardNote{
     position: relative;
-    width: 90%;
+    width: 100%;
     height: 18%;
     /* top: -13%; */
-    margin-left: 10%;
+    /* margin-left: 2%; */
     display: flex;
     flex-direction: row;
+    border-bottom: 1px solid grey;
     /* gap: 5px; */
     /* z-index: 100; */
 
+}
+
+#dark .standardNote{
+    background-color: hsl(235, 24%, 19%);
+
+    >p{
+        color: white;
+    }
 }
 
 .circle{
@@ -17,6 +26,8 @@
     background-position: center;
     height: 50%;
     width: 12%;
+    margin-top: 3%;
+    margin-left: 3%;
     
     /* margin-top: 5%; */
     /* margin-bottom: 5%; */
@@ -28,14 +39,18 @@
 
 .normal{
     padding-left: 5%;
+    margin-top: 3%;
 }
 .strike{
     padding-left: 5%;
+    margin-top: 3%;
     text-decoration: line-through;
     color: grey;
 }
 
 .cross{
+    margin-top: 3%;
+    margin-right: 3%;
     background-size: cover;
     background-position: center;
     height: 40%;

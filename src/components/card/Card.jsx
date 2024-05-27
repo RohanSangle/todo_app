@@ -33,7 +33,7 @@ const Card = ({notes, setNotes, theme}) => {
         {/* <hr className='lastline'></hr> */}
         <div className='footer'>
             
-            <p>5 items left</p>
+            <p>{notes.length} items left</p>
 
             <button>All</button>
             <button>Active</button>

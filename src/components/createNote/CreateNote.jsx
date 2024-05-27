@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './createNote.css'
 
-const CreateNote = ({onAdd}) => {
+const CreateNote = ({onAdd, theme}) => {
 
   const [note, setNote] = useState("");
 
@@ -14,7 +14,7 @@ const CreateNote = ({onAdd}) => {
   }
 
   return (
-    <div className='createNote'>
+    <div className='createNote' id={theme}>
         <input 
           value={note} 
           placeholder='Create a new todo...'

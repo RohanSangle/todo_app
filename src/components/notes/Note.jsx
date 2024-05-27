@@ -37,7 +37,7 @@ const Note = (props) => {
     }
 
     return (
-        <div className='standardNote'>
+        <div className='standardNote' id={props.theme}>
             {/* <article className='circle'></article> */}
             <img 
                 className='circle' 

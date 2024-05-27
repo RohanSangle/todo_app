@@ -21,23 +21,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  letter-spacing: 5px;
+  letter-spacing: 10px;
   color: white;
+  left: 15%;
 }
 .themeSwitch{
   position: absolute;
-  margin-left: 10%;
-  margin-top: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 5%;
-  height: 5%;
+  left: 63%;
+  top: 8.5%;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 2%;
+  height: 4%;
   background: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 5%;
+  /* padding: 5%; */
   /* border: 0; */
+}
+.themeSwitch:hover{
+  cursor: pointer;
 }
 
 .trial{
