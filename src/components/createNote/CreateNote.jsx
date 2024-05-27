@@ -9,7 +9,6 @@ const CreateNote = ({onAdd, theme}) => {
     if(e.key === "Enter"){
       onAdd(note);
       setNote("");
-      // e.preventDefault();
     }
   }
 

@@ -3,17 +3,24 @@
     height: 10%;
     width: 35%;
     margin-top: 8%;
-    margin-left: 30%;
+    margin-left: 33%;
     border-radius: 7px;
 
     >input{
         border-radius: 7px;
         background-color: hsl(0, 0%, 98%);
         border: 0;
+        width: 90%;
+        margin-left: 5%;
+    }
+    >input:focus{
+        outline: none;
     }
 }
 
 #dark .createNote{
+
+    background-color: hsl(235, 24%, 19%);
 
     >input{
         background-color: hsl(235, 24%, 19%);
