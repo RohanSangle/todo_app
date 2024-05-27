@@ -67,14 +67,14 @@
 
     >p{
         font-size: 12px;
-        font-weight: 400;
+        font-weight: 700;
         margin-top: 5%;
         margin-left: 3%;
         color: hsl(234, 11%, 52%);
     }
     >button{
-        font-size: 12px;
-        font-weight: 400;
+        /* font-size: 12px; */
+        font-weight: 700;
         margin-top: 3%;
         margin-left: 3%;
         margin-right: 3%;
@@ -110,9 +110,12 @@
     margin-right: 8%;
     >button{
         border: 0;
-        font-size: 12px;
-        font-weight: 400;
+        /* font-size: 12px; */
+        font-weight: 700;
         color: hsl(234, 11%, 52%);
+    }
+    >button:nth-child(1){
+        color: rgb(17, 95, 184);
     }
     >button:hover{
         cursor: pointer;
