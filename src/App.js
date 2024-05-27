@@ -27,14 +27,6 @@ function App() {
     })
   }
 
-  // const deleteNote = (id) => {
-  //   setNotes(prevNotes=>{
-  //     return prevNotes.filter((noteItem, index) => {
-  //       return index !== id;
-  //     })
-  //   })
-  // }
-
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
       <div className='main' id={theme}>
@@ -44,17 +36,8 @@ function App() {
         <img className='themeSwitch' onClick={toggleTheme} src={theme === 'light' ? moon : sun} alt=''/>
 
         <CreateNote onAdd={addNote} theme={theme}/>
-        {/* <Card/> */}
+        
         <Card notes={notes} setNotes={setNotes} theme={theme}/>
-        {/* {notes.map((noteItem, index)=>{
-          return (
-          <Note
-            key={index}
-            id={index}
-            content={noteItem} 
-            onDelete={deleteNote}
-          />)
-        })} */}
 
         <p className='end'>Drag and drop to reorder list</p>
         
