@@ -6,6 +6,7 @@ import Note from '../notes/Note.jsx'
 const Card = ({notes, setNotes, theme}) => {
 
   const [ifChecked, setIfChecked] = useState(new Array(notes.length).fill(false));
+  const [displayMode, setDisplayMode] = useState('all'); // 'all' or 'completed'
 
   // const deleteNote = (id) => {
   //   setNotes(prevNotes=>{
@@ -29,6 +30,24 @@ const Card = ({notes, setNotes, theme}) => {
     );
   };
 
+  const showAllNotes = () => {
+    setDisplayMode('all');
+  };
+
+  const showCompletedNotes = () => {
+    setDisplayMode('completed');
+  };
+
+  const showActiveNotes = () => {
+    setDisplayMode('active');
+  };
+
+  const filteredNotes = displayMode === 'completed'
+    ? notes.filter((_, index) => ifChecked[index])
+    : displayMode === 'active'
+    ? notes.filter((_, index) => !ifChecked[index])
+    : notes;
+
   // const clearCompleted = () => {
   //   setNotes((prevNotes) =>
   //     prevNotes.filter((noteItem, index) => !ifChecked[index])
@@ -42,7 +61,7 @@ const Card = ({notes, setNotes, theme}) => {
     <>
         <div className='noteList-container'>
           <div className='noteList-content'>
-            {notes.map((noteItem, index)=>{
+            {filteredNotes.map((noteItem, index)=>{
               return (
               <Note
                 key={index}
@@ -59,11 +78,13 @@ const Card = ({notes, setNotes, theme}) => {
         {/* <hr className='lastline'></hr> */}
         <div className='footer'>
             
-          <p>{notes.length} items left</p>
-
-          <button>All</button>
-          <button>Active</button>
-          <button>Completed</button>
+          <p>{filteredNotes.length} items left</p>
+          
+          <div className='group'>
+            <button onClick={showAllNotes}>All</button>
+            <button onClick={showActiveNotes}>Active</button>
+            <button onClick={showCompletedNotes}>Completed</button>
+          </div>
 
           <button onClick={clearCompleted}>Clear Completed</button>
         </div>

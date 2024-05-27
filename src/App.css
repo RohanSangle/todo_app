@@ -23,11 +23,11 @@
   align-items: center;
   letter-spacing: 10px;
   color: white;
-  left: 15%;
+  left: 18%;
 }
 .themeSwitch{
   position: absolute;
-  left: 63%;
+  left: 66%;
   top: 8.5%;
   /* display: flex; */
   /* justify-content: center; */

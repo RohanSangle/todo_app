@@ -6,7 +6,7 @@
     height: 55%;
     width: 35%;
     margin-top: 2.5%;
-    margin-left: 30%;
+    margin-left: 33%;
     overflow: hidden;
 }
 
@@ -60,7 +60,7 @@
     flex-direction: row;
     width: 35%;
     height: 5%;
-    margin-left: 30%;
+    margin-left: 33%;
     margin-top: -3%;
     justify-content: center;
     align-items: center;
@@ -71,16 +71,67 @@
         font-size: 12px;
         font-weight: 400;
         margin-top: 5%;
+        margin-left: 3%;
+        color: hsl(234, 11%, 52%);
     }
     >button{
         font-size: 12px;
         font-weight: 400;
-        margin-top: 5%;
+        margin-top: 3%;
+        margin-left: 3%;
+        margin-right: 3%;
+        border: 0;
+        color: hsl(234, 11%, 52%);
+    }
+    >button:hover{
+        cursor: pointer;
+        color: black;
+    }
+
+}
+
+.group{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10%;
+    margin-top: 3%;
+    height: 80%;
+    margin-right: 8%;
+    >button{
+        border: 0;
+        font-size: 12px;
+        font-weight: 400;
+        color: hsl(234, 11%, 52%);
+    }
+    >button:hover{
+        cursor: pointer;
+        color: black;
     }
 
 }
 
 #dark .footer{
     background-color: hsl(235, 24%, 19%);
-    color: white;
+    /* color: white; */
+
+    >button{
+        background-color: hsl(235, 24%, 19%);
+        color: hsl(234, 11%, 52%);
+    }
+    >button:hover{
+        color: hsl(236, 33%, 92%);
+    }
+}
+
+#dark .group{
+    >button{
+        background-color: hsl(235, 24%, 19%);
+        color: hsl(234, 11%, 52%);
+    }
+    >button:hover{
+        color: hsl(236, 33%, 92%);
+    }
+    
 }
