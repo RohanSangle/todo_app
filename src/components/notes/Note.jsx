@@ -19,22 +19,12 @@ const Note = ({ id, content, onDelete, theme, ifChecked, setIfChecked}) => {
         });
     }, [checked, id, setIfChecked]);
 
-    // if(checked === false){
-    //     setIfChecked(false);
-    // }
-    // else{
-    //     setIfChecked(true);
-    // }
-
     const contentClassName = checked ? 'strike' : 'normal';
 
     function handleClick() {
         onDelete(id);
     }
 
-    // const togglechecked =() => {
-    //     setChecked(!checked)
-    // }
     const togglechecked = () => {
         setChecked((prev) => !prev);
     };
@@ -56,16 +46,17 @@ const Note = ({ id, content, onDelete, theme, ifChecked, setIfChecked}) => {
 
     return (
         <div className='standardNote' id={theme}>
-            {/* <article className='circle'></article> */}
+            
             <img 
                 className='circle' 
                 src={togglecircle()} 
                 alt='' 
                 onClick={togglechecked}
-                // onClick={() => onToggleChecked(id)}
+                
             />
+            
             <p className={contentClassName}>{content}</p>
-            {/* <button onClick={handleClick}>X</button> */}
+            
             <img
                 className='cross' 
                 src={cross} 

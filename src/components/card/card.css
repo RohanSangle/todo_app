@@ -51,7 +51,6 @@
     width: 35%;
     height: 1%;
     margin-left: 30%;
-    /* margin-top: 3%; */
 }
 
 .footer{
@@ -65,7 +64,6 @@
     justify-content: center;
     align-items: center;
     border-top: 1px solid grey;
-    /* border-radius: 7px; */
 
     >p{
         font-size: 12px;
@@ -90,6 +88,17 @@
 
 }
 
+#dark .footer{
+    background-color: hsl(235, 24%, 19%);
+
+    >button{
+        background-color: hsl(235, 24%, 19%);
+    }
+    >button:hover{
+        color: hsl(236, 33%, 92%);
+    }
+}
+
 .group{
     position: relative;
     display: flex;
@@ -112,23 +121,9 @@
 
 }
 
-#dark .footer{
-    background-color: hsl(235, 24%, 19%);
-    /* color: white; */
-
-    >button{
-        background-color: hsl(235, 24%, 19%);
-        color: hsl(234, 11%, 52%);
-    }
-    >button:hover{
-        color: hsl(236, 33%, 92%);
-    }
-}
-
 #dark .group{
     >button{
         background-color: hsl(235, 24%, 19%);
-        color: hsl(234, 11%, 52%);
     }
     >button:hover{
         color: hsl(236, 33%, 92%);

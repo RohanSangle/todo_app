@@ -8,14 +8,6 @@ const Card = ({notes, setNotes, theme}) => {
   const [ifChecked, setIfChecked] = useState(new Array(notes.length).fill(false));
   const [displayMode, setDisplayMode] = useState('all'); // 'all' or 'completed'
 
-  // const deleteNote = (id) => {
-  //   setNotes(prevNotes=>{
-  //     return prevNotes.filter((noteItem, index) => {
-  //       return index !== id;
-  //     })
-  //   })
-  // }
-
   const deleteNote = (id) => {
     setNotes((prevNotes) => prevNotes.filter((_, index) => index !== id));
     setIfChecked((prevChecked) => prevChecked.filter((_, index) => index !== id));
@@ -48,15 +40,6 @@ const Card = ({notes, setNotes, theme}) => {
     ? notes.filter((_, index) => !ifChecked[index])
     : notes;
 
-  // const clearCompleted = () => {
-  //   setNotes((prevNotes) =>
-  //     prevNotes.filter((noteItem, index) => !ifChecked[index])
-  //   );
-  //   setIfChecked((prevState) =>
-  //     prevState.filter((item, index) => !ifChecked[index])
-  //   );
-  // };
-
   return (
     <>
         <div className='noteList-container'>
@@ -75,7 +58,7 @@ const Card = ({notes, setNotes, theme}) => {
             })} 
           </div>
         </div>
-        {/* <hr className='lastline'></hr> */}
+        
         <div className='footer'>
             
           <p>{filteredNotes.length} items left</p>

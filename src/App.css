@@ -29,31 +29,14 @@
   position: absolute;
   left: 66%;
   top: 8.5%;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
   width: 2%;
   height: 4%;
   background: no-repeat;
   background-size: cover;
   background-position: center;
-  /* padding: 5%; */
-  /* border: 0; */
 }
 .themeSwitch:hover{
   cursor: pointer;
-}
-
-.trial{
-  position: absolute;
-  background: url("./images/icon-sun.svg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 50px;
-  width: 50px; 
-  /* padding: 5%; */
-  margin-top: 5%;
-  margin-left: 70%;
 }
 
 
@@ -70,8 +53,6 @@
   color: hsl(233, 14%, 35%);
   font-size: 12px;
   font-weight: 400;
-  /* justify-content: center; */
-  /* align-items: center; */
   width: 50%;
   height: 5%;
 }

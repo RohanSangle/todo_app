@@ -2,17 +2,16 @@
     position: relative;
     width: 100%;
     height: 16%;
-    /* top: -13%; */
-    /* margin-left: 2%; */
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid grey;
-    /* gap: 5px; */
-    /* z-index: 100; */
 
 }
 .standardNote:hover{
     cursor: pointer;
+}
+.standardNote:hover .cross{
+    display: block;
 }
 
 #dark .standardNote{
@@ -24,16 +23,12 @@
 }
 
 .circle{
-    /* background: url("../../images/neon-circle-white.png") no-repeat; */
     background-size: cover;
     background-position: center;
     height: 50%;
     width: 6%;
     margin-top: 3%;
     margin-left: 3%;
-    
-    /* margin-top: 5%; */
-    /* margin-bottom: 5%; */
 }
 
 .circle:hover{
@@ -43,8 +38,6 @@
 .normal{
     padding-left: 4%;
     margin-top: 3%;
-    /* font-size: 18px; */
-    /* font-weight: 400; */
 }
 .strike{
     padding-left: 4%;
@@ -60,6 +53,7 @@
     background-position: center;
     height: 30%;
     width: 3%;
+    display: none;
 }
 .cross:hover{
     cursor: pointer;
